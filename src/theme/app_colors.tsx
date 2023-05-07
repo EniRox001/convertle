@@ -1,5 +1,3 @@
-import React from "react";
-
 const AppColors = {
     oxfordBlue: "#000022",
     oxfordBlueShade: "#00003D",

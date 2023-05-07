@@ -8,6 +8,7 @@ import HomeScreen from '../screens/home';
 import {home_style} from '../styles/home_style';
 import buttonStyle from '../styles/button_style';
 import iconStyle from '../styles/icon_style';
+import UnitPicker from '../screens/unitPicker';
 
 const Stack = createStackNavigator();
 
@@ -24,23 +25,26 @@ function AppNavigation() {
             headerStyle: home_style.home_header,
             headerTitleStyle: home_style.home_header_title,
             headerShadowVisible: false,
-            // headerRight: () => (
-            //   <TouchableOpacity style={buttonStyle.headerButton}>
-            //     <Image 
-            //       source={require('../assets/icons/more_vert.png')}
-            //       style={iconStyle.defaultIcon}
-            //     />
-            //   </TouchableOpacity>
-            // ),
-            // headerLeft: () => (
-            //   <TouchableOpacity style={buttonStyle.headerButton}>
-            //     <Image
-            //       source={require('../assets/icons/arrow_back_ios.png')}
-            //       style={iconStyle.defaultIcon}
-            //     />
-            //   </TouchableOpacity>
-            // ),
         }}
+        />
+        <Stack.Screen
+          name="UnitPicker"
+          component={UnitPicker}
+          options={({navigation}: any) => ({
+            title: 'Select Unit',
+            headerTitleAlign: 'center',
+            headerStyle: home_style.home_header,
+            headerTitleStyle: home_style.home_header_title,
+            headerShadowVisible: false,
+            headerLeft: () => (
+              <TouchableOpacity style={buttonStyle.headerButton} onPress={() => navigation.goBack()}>
+                <Image
+                  source={require('../assets/icons/arrow_back_ios.png')}
+                  style={{width: 20, height: 20, tintColor: "#fff", marginRight: 20}}
+                />
+              </TouchableOpacity>
+            ),
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>

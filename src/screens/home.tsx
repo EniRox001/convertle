@@ -6,7 +6,7 @@ import UnitButton from "../components/buttons/unitButton";
 import { home_style } from "../styles/home_style";
 import ConvertFunction from "../utils/convertFunction";
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     const [fromText, setFromText] = React.useState("")
     const [toText, setToText] = React.useState("")
     const [category, setCategory] = React.useState("Currency")
@@ -416,11 +416,11 @@ const HomeScreen = () => {
     return (
         <View style={home_style.container}>
             <View style={home_style.input_container}>
-                <UnitButton unit="$" special={false}/>
+                <UnitButton unit="$" special={false} onPress={() => {navigation.navigate('UnitPicker')}}/>
                 <InputButton unit="$" text="from" value={fromText} special={false}/>
             </View>
             <View style={home_style.input_container}>
-                <UnitButton unit="€" special={true}/>
+                <UnitButton unit="€" special={true} onPress={() => {navigation.navigate('UnitPicker')}}/>
                 <InputButton unit="€" text="to" value={toText} special={true}/>
             </View>
             <View style={home_style.entryField}>

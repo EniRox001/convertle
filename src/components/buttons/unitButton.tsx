@@ -6,13 +6,14 @@ import textStyle from "../../styles/text_style";
 interface UnitButtonProps {
     unit: string;
     special: boolean;
+    onPress: () => void;
 }
 
-const UnitButton = ({unit, special} : UnitButtonProps) => {
+const UnitButton = ({unit, special, onPress} : UnitButtonProps) => {
     {if (special === true) {
         return (
             <View>
-                <TouchableOpacity style={buttonStyle.specialUnitButton}>
+                <TouchableOpacity style={buttonStyle.specialUnitButton} onPress={onPress}>
                     <Text style={textStyle.unitText}>{unit}</Text>
                 </TouchableOpacity>
             </View>
@@ -20,7 +21,7 @@ const UnitButton = ({unit, special} : UnitButtonProps) => {
     } else {
         return (
             <View>
-                <TouchableOpacity style={buttonStyle.unitButton}>
+                <TouchableOpacity style={buttonStyle.unitButton} onPress={onPress}>
                     <Text style={textStyle.unitText}>{unit}</Text>
                 </TouchableOpacity>
             </View>

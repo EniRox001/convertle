@@ -5,7 +5,8 @@ const buttonStyle = StyleSheet.create({
     headerButton: {
         backgroundColor: AppColors.oxfordBlueShade,
         borderRadius: 100,
-        padding: 16,
+        paddingLeft: 26,
+        paddingVertical: 16,
         marginHorizontal: 30,
         alignItems: "center",
         display: "flex",
