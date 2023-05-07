@@ -1,10 +1,8 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-import InputButton from "../components/buttons/inputButton";
-import KeyButton from "../components/buttons/keyButton";
-import UnitButton from "../components/buttons/unitButton";
-import { home_style } from "../styles/home_style";
-import ConvertFunction from "../utils/convertFunction";
+import { ExtendedButton, InputButton, UnitButton, KeyButton } from '../components/buttons/HomeButtons';
+import { home_style } from "../styles/HomeStyle";
+import ConvertFunction from "../utils/convert_function";
 
 const HomeScreen = ({navigation}) => {
     const [fromText, setFromText] = React.useState("")
@@ -424,22 +422,23 @@ const HomeScreen = ({navigation}) => {
                 <InputButton unit="€" text="to" value={toText} special={true}/>
             </View>
             <View style={home_style.entryField}>
-                <KeyButton text="1" onPress={() => {handleFromTextChange('1')}}/>
-                <KeyButton text="2" onPress={() => {handleFromTextChange('2')}}/>
-                <KeyButton text="3" onPress={() => {handleFromTextChange('3')}}/>
-                <KeyButton text="C" onPress={handleFromTextClear}/>
-                <KeyButton text="4" onPress={() => {handleFromTextChange('4')}}/>
-                <KeyButton text="5" onPress={() => {handleFromTextChange('5')}}/>
-                <KeyButton text="6" onPress={() => {handleFromTextChange('6')}}/>
-                <KeyButton text="⌫" onPress={handleFromTextRemove}/>
-                <KeyButton text="7" onPress={() => {handleFromTextChange('7')}}/>
-                <KeyButton text="8" onPress={() => {handleFromTextChange('8')}}/>
-                <KeyButton text="9" onPress={() => {handleFromTextChange('9')}}/>
-                <KeyButton text="." onPress={() => {handleFromTextChange('.')}}/>
-                <KeyButton text="0" onPress={() => {handleFromTextChange('0')}}/>
-                <KeyButton text="00" onPress={() => {handleFromTextChange('00')}}/>
-                <KeyButton text="," onPress={() => {handleFromTextChange(',')}}/>
-                <KeyButton text="=" onPress={() => {}}/>
+                <KeyButton extended={false} text="1" onPress={() => {handleFromTextChange('1')}}/>
+                <KeyButton extended={false} text="2" onPress={() => {handleFromTextChange('2')}}/>
+                <KeyButton extended={false} text="3" onPress={() => {handleFromTextChange('3')}}/>
+                <KeyButton extended={false} text="⌫" onPress={handleFromTextRemove}/>
+                <KeyButton extended={false} text="4" onPress={() => {handleFromTextChange('4')}}/>
+                <KeyButton extended={false} text="5" onPress={() => {handleFromTextChange('5')}}/>
+                <KeyButton extended={false} text="6" onPress={() => {handleFromTextChange('6')}}/>
+                <KeyButton extended={false} text="." onPress={() => {handleFromTextChange('.')}}/>
+                <KeyButton extended={false} text="7" onPress={() => {handleFromTextChange('7')}}/>
+                <KeyButton extended={false} text="8" onPress={() => {handleFromTextChange('8')}}/>
+                <KeyButton extended={false} text="9" onPress={() => {handleFromTextChange('9')}}/>
+                <KeyButton extended={false} text="," onPress={() => {handleFromTextChange(',')}}/>
+                <KeyButton extended={false} text="00" onPress={() => {handleFromTextChange('00')}}/>
+                <KeyButton extended={false} text="0" onPress={() => {handleFromTextChange('0')}}/>
+                <ExtendedButton text="C" onPress={handleFromTextClear}/>
+                {/* <KeyButton extended={true} text="C" onPress={() => {}}/> */}
+
             </View>
         </View>
     );

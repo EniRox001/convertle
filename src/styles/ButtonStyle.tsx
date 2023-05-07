@@ -12,6 +12,16 @@ const buttonStyle = StyleSheet.create({
         display: "flex",
         justifyContent: "center",
     },
+    extendedButton: {
+        backgroundColor: AppColors.cardinal,
+        borderRadius: 20,
+        height: 80,
+        minWidth: "50%",
+        alignItems: "center",
+        display: "flex",
+        justifyContent: "center",
+        marginBottom: 20,
+    },
     unitButton: {
         backgroundColor: AppColors.oxfordBlueShade,
         borderRadius: 20,

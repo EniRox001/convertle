@@ -13,10 +13,10 @@ export const home_style = StyleSheet.create({
         flex: 1,
         backgroundColor: "#000022",
         alignItems: "center",
-        padding: 10,
         display: "flex",
+        padding: 5,
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-between",
     },
     input_container: {
         gap: 10,
@@ -25,14 +25,13 @@ export const home_style = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginBottom: 20,
     },
     entryField: {
         display: "flex",
         flexDirection: "row",
+        justifyContent: "space-between",
         alignItems: "center",
         flexWrap: "wrap",
-        gap: 10,
     }
 
 });

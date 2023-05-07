@@ -3,12 +3,12 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import { Button, TouchableOpacity, Image } from 'react-native';
 
-import HomeScreen from '../screens/home';
+import HomeScreen from '../screens/Home';
 
-import {home_style} from '../styles/home_style';
-import buttonStyle from '../styles/button_style';
-import iconStyle from '../styles/icon_style';
-import UnitPicker from '../screens/unitPicker';
+import {home_style} from '../styles/HomeStyle';
+import buttonStyle from '../styles/ButtonStyle';
+import iconStyle from '../styles/IconStyle';
+import UnitPicker from '../screens/UnitPicker';
 
 const Stack = createStackNavigator();
 
