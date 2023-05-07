@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 export const home_style = StyleSheet.create({
     home_header: {
         backgroundColor: "#000022",
-        height: 150,
     },
     home_header_title: {
         fontSize: 24,
@@ -17,7 +16,7 @@ export const home_style = StyleSheet.create({
         padding: 10,
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center",
     },
     input_container: {
         gap: 10,
@@ -32,7 +31,6 @@ export const home_style = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        // justifyContent: "space-between",
         flexWrap: "wrap",
         gap: 10,
     }

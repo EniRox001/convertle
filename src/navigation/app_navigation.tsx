@@ -24,22 +24,22 @@ function AppNavigation() {
             headerStyle: home_style.home_header,
             headerTitleStyle: home_style.home_header_title,
             headerShadowVisible: false,
-            headerRight: () => (
-              <TouchableOpacity style={buttonStyle.headerButton}>
-                <Image 
-                  source={require('../assets/icons/more_vert.png')}
-                  style={iconStyle.defaultIcon}
-                />
-              </TouchableOpacity>
-            ),
-            headerLeft: () => (
-              <TouchableOpacity style={buttonStyle.headerButton}>
-                <Image
-                  source={require('../assets/icons/arrow_back_ios.png')}
-                  style={iconStyle.defaultIcon}
-                />
-              </TouchableOpacity>
-            ),
+            // headerRight: () => (
+            //   <TouchableOpacity style={buttonStyle.headerButton}>
+            //     <Image 
+            //       source={require('../assets/icons/more_vert.png')}
+            //       style={iconStyle.defaultIcon}
+            //     />
+            //   </TouchableOpacity>
+            // ),
+            // headerLeft: () => (
+            //   <TouchableOpacity style={buttonStyle.headerButton}>
+            //     <Image
+            //       source={require('../assets/icons/arrow_back_ios.png')}
+            //       style={iconStyle.defaultIcon}
+            //     />
+            //   </TouchableOpacity>
+            // ),
         }}
         />
       </Stack.Navigator>

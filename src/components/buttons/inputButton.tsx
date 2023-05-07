@@ -15,7 +15,7 @@ const InputButton = ({unit, text, value, special} : InputButtonProps) => {
     {if (special === true) {
         return (
             <View>
-                <TouchableOpacity style={buttonStyle.specialInputButton}>
+                <View style={buttonStyle.specialInputButton}>
                     <Text style={textStyle.inputHint}>{text}</Text>
                     <View style={buttonStyle.inputEntry}>
                         <Text style={textStyle.unitText}>{unit}</Text>
@@ -28,7 +28,7 @@ const InputButton = ({unit, text, value, special} : InputButtonProps) => {
                             value={value}
                         />
                     </View>
-                </TouchableOpacity>
+                </View>
             </View>
         )
         } else {
