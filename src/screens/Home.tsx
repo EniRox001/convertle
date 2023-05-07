@@ -434,8 +434,8 @@ const HomeScreen = ({navigation}) => {
                 <KeyButton extended={false} text="8" onPress={() => {handleFromTextChange('8')}}/>
                 <KeyButton extended={false} text="9" onPress={() => {handleFromTextChange('9')}}/>
                 <KeyButton extended={false} text="," onPress={() => {handleFromTextChange(',')}}/>
-                <KeyButton extended={false} text="00" onPress={() => {handleFromTextChange('00')}}/>
                 <KeyButton extended={false} text="0" onPress={() => {handleFromTextChange('0')}}/>
+                <KeyButton extended={false} text="00" onPress={() => {handleFromTextChange('00')}}/>
                 <ExtendedButton text="C" onPress={handleFromTextClear}/>
                 {/* <KeyButton extended={true} text="C" onPress={() => {}}/> */}
 
