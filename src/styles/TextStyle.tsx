@@ -17,6 +17,15 @@ const textStyle = StyleSheet.create({
         fontSize: 24,
         fontWeight: "bold",
     },
+    unitBorder: {
+        backgroundColor: AppColors.rustyRed,
+        borderRadius: 500,
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        color: "#fff",
+        fontSize: 24,
+        fontWeight: "bold",
+    },
 });
 
 export default textStyle;

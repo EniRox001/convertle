@@ -1,16 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { ExtendedButton, InputButton, UnitButton, KeyButton } from '../components/buttons/HomeButtons';
 import { home_style } from "../styles/HomeStyle";
 import ConvertFunction from "../utils/convert_function";
 
-const HomeScreen = ({navigation}) => {
-    const [fromText, setFromText] = React.useState("")
-    const [toText, setToText] = React.useState("")
-    const [category, setCategory] = React.useState("Currency")
-
-    const [fromUnit, setFromUnit] = React.useState("$")
-    const [toUnit, setToUnit] = React.useState("€")
+const HomeScreen = ({navigation, route}) => {
+    const [fromText, setFromText] = useState("")
+    const [toText, setToText] = useState("")
+    const [fromUnit, setFromUnit] = useState("$")
+    const [toUnit, setToUnit] = useState('$')
 
     const handleFromTextChange = (text: string) => {
         setFromText(fromText + text)
@@ -380,45 +378,14 @@ const HomeScreen = ({navigation}) => {
                 }
     }
 
-    const handleCategoryChange = (unit) => {
-        switch (unit) {
-            case "$":
-            case "€":
-            case "£":
-            case "¥":
-            case "₹":
-            case "฿":
-            case "Ξ":
-                setCategory("currency")
-                break;
-            case "mm":
-            case "cm":
-            case "m":
-            case "km":
-            case "in":
-            case "ft":
-                setCategory("length")
-                break;
-            case "°C":
-            case "°F":
-            case "K":
-                setCategory("temperature")
-                break;
-            default:
-                break;
-        }       
-        setFromText("0")
-        setToText("0")
-    }
-
     return (
         <View style={home_style.container}>
             <View style={home_style.input_container}>
-                <UnitButton unit="$" special={false} onPress={() => {navigation.navigate('UnitPicker')}}/>
+                <UnitButton unit={fromUnit} special={false} onPress={() => {navigation.navigate('UnitPicker')}}/>
                 <InputButton unit="$" text="from" value={fromText} special={false}/>
             </View>
             <View style={home_style.input_container}>
-                <UnitButton unit="€" special={true} onPress={() => {navigation.navigate('UnitPicker')}}/>
+                <UnitButton unit={toUnit} special={true} onPress={() => {navigation.navigate('UnitPicker', {destination: 'toUnit'})}}/>
                 <InputButton unit="€" text="to" value={toText} special={true}/>
             </View>
             <View style={home_style.entryField}>
